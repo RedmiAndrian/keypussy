@@ -40,6 +40,26 @@ def _read():
     f.close()
     print()
 
+def _delete():
+    f = open("password.txt", "r")
+    content_list = f.read().split()
+    _read()
+    a = int(input("Which one do you want to remove: "))
+    a = (a - 1) * 3
+    temp = []
+    for i in range(len(content_list)):
+        if (i > a + 2) or (i < a):
+            temp.append(content_list[i])
+
+    f.close()
+    f = open("password.txt", "w")
+    f.close()
+    f = open("password.txt", "a")
+    for i in temp:
+        f.write(i + " ")
+    f.close()
+
+
 def _process():
     f = open("password.txt", "a")
     platform = str(input("What platform will it be: "))
@@ -81,6 +101,8 @@ if user_pass == admin_password:
             finish = True
         if a == "reset":
             _reset()
+        if a == "delete":
+            _delete()
         if a == "help":
             _help()
         if a == "about":
