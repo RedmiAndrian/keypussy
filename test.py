@@ -15,6 +15,7 @@ def _help():
     print()
     print("Type \"help\" to show this message.")
     print("Type \"read\" to show every password kept by keypussy")
+    print("Type \"delete\" to delete any password kept by keypussy")
     print("Type \"reset\" to delete every password kept by keypussy")
     print("Type \"write\" to add password to keep by keypussy")
     print("Type \"about\" for this project's lore. lol")
